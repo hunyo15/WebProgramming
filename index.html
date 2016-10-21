@@ -40,10 +40,10 @@
                 <!-- Title of container title -->
                 <div class="containerTitle">CSS Property:</div>
                 <!-- form that shows properties options -->
-                <form class="code">
+                <form class="code" action="javascript: return false;">
 
                     <!-- property Titile: It can be changed according to the proerty -->
-                    <div id="propertyTitle">animation-timing-function:</div>
+                    <div id="propertyTitle">animation-duration:</div>
                     <br>
                     <!-- hidden input tag to store input input data -->
                     <input type="hidden" id="preselectedValue" value = "1s">
@@ -64,13 +64,29 @@
                                onclick="getPropertyValue(this)" id = "value_3" value="5s">
                         <label for="value_3">5s</label>
                     </div>  
+                    <div class="radio">
+                        <input autocomplete="off" type="radio" name="radio_position" 
+                               onclick="getPropertyValue(this)" id = "value_4" value="10s">
+                        <label for="value_4">10s</label>
+                    </div>  
                      <div class="radio">
                         <input autocomplete="off" type="radio" name="radio_position" 
-                               onclick="getPropertyValue(this)" id = "value_4" value="-1s">
-                        <label for="value_4">-1s</label>
+                               onclick="getPropertyValue(this)" id = "value_4" value="500ms">
+                        <label for="value_4">500ms</label>
                     </div>  
                 </form> <!-- end of form --> 
             
+                <!-- sub container for JavaScript code -->
+                <div class="containerTitle">JavaScript Code:</div>
+                <!-- adopted JavaScript code  -->
+                <!-- propertyName: This bounds to the propertyTitle --> 
+                <!-- enlargecssprop: This bounds to the selected property value --> 
+                <div class="currentCode" id="JSCode">var domObj = document.getElementById("demoDIV");
+                domObj.style.<span id="propertyName">animationDuration</span> = <span id="enlargeJSValue">1s</span>;<br>
+                </div>  <!-- end adopted JavaScript code -->
+
+
+
                 <footer class="pfooter">
                     <p>
                         <strong>Note:</strong>
@@ -81,6 +97,7 @@
           
             <!-- resultContainer: container that represents results -->
             <div class="resultContainer"> 
+
                 <!-- sub container for result -->
                 <div class="containerTitle">Result:</div> 
                 <!-- resultView where results are going to be shown -->
@@ -89,8 +106,7 @@
                     <div id="resultDIV">
                         <div>
                             <!-- demoDiv: the real object to be animated -->
-                            <div id="demoDIV">
-                            </div>               
+                            <div id="demoDIV">demo DIV</div>      
                         </div>
                     </div>
                 </div>
@@ -100,9 +116,12 @@
                 <!-- adopted css code  -->
                 <!-- propertyName: This bounds to the propertyTitle --> 
                 <!-- enlargecssprop: This bounds to the selected property value --> 
-                <pre id="currentCode">#demoDIV {<br> <span id="propertyName">animation-timing-function:<span id="enlargecssprop">1s</span>;<br>}
+                <pre class="currentCode" id="CSSCode">#demoDIV{<br> <span id="propertyName">animation-timing-function:<span id="enlargeCSSProp">1s</span>;<br>}
                 </pre>  <!-- end adopted css code -->
           
+
+
+
             </div>    <!-- end of resultContainer -->
 
         </div>      <!-- end of rootContainer -->
