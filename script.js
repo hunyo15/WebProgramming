@@ -30,12 +30,25 @@ function getPropertyValue(obj) {
  */
 function restartDemo(value) {
  
+    document.getElementById("demoDIV").className = "my" + value;
+    var x =  document.getElementById("resultView");
+    var y=document.getElementById("resultDIV").cloneNode(true);
+     var cc;
+    x.removeChild(document.getElementById("resultDIV"));
+    x.appendChild(y);
+
+    document.getElementById("demoDIV").style.animationDuration = value;
+
     var pName = document.getElementById("propertyTitle").innerHTML;
-    var x = pName + "<span id='enlargecssprop'>" + value  + "</span>";
+    var x = pName + "<span id='enlargeCSSProp'>" + value  + "</span>";
     var y="#demoDIV {<br>    ###CSSPROP###;<br>}<br>";
     var z=y.replace("###CSSPROP###",x);
 
-    document.getElementById("currentCode").innerHTML = z;
+    document.getElementById("CSSCode").innerHTML = z;
+
+    document.getElementById("enlargeJSValue").innerHTML = value;
 }
 
-
+if (!String.prototype.trim) {
+   String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+}   
