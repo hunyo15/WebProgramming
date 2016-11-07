@@ -1,6 +1,7 @@
 This Project is Web Programming codes to study HTML5, JavaScript, and CSS style with students.
 
 이 프로젝트는 학생들과 HTML5, JavaScript, CSS를 공부하기 위한 웹 프로그래밍 코드 입니다.
+기존 기능에 새로운 기능이 추가되는 형태로 개발되기를 바랍니다.
 
 Defined functions(정의된 함수):
 
