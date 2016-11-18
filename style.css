@@ -1,109 +1,81 @@
-/* Styles go here */
-#wrap{
-  width:1000px; 
-  height:800px; 
-  background:white;
-  }
+/* based on trystyle.css of w3schools.com */
 
-#header{
-  width:900px; 
-  height:120px; 
-  margin-left:50px; 
-  margin-bottom:10px; 
-  background:#848484;
-  text-align:center;
-  font-family:Impact; 
-  font-size:80px; 
-  color:white; 
-  
-  }
-
-#middle{
-  width:1000px; 
-  float:left; 
-  background:white;
-  }
-
-#sidebar{
-  width:200px;
-  height:500px; 
-  float:left; 
-  margin-left:50px; 
-  margin-right:10px; 
-  background:white;
-  }
-  * {
-  text-decoration: none;
-}/*sub메뉴 밑줄사라짐*/
-
-.label {
-  width: 210px;
-  /*메뉴 가로 넓이*/
-  height: 50px;
-  margin: 3px 0 0 0;
-  /*메뉴 사이의 간격*/
-  padding: 10px;
-  background-color: #848484;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
-
-.elements {
-  background-color: #F2F2F2;
-  width: 210px;
-  padding: 10px
-  /*sub메뉴 가로길이*/
-
-}
-
-a {
-  color: black;
-  /*sub메뉴 글자색*/
-}
-
-li {
-  height: 50px;
-  background-color: #F2F2F2;
-  text-align: center;
-}
-
-li:hover {
-  height: 50px;
-  background-color: #BDBDBD;
-
-}
-
-ul { /**/
-  list-style: none;
-  color: #808080;
-  font-size: 15px;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-#content{
-  width:700px; 
-  height:1000px;
-  float:left; 
-  background:white;
-  }
-  
-  body {
+body {
     font-family: verdana;
     font-size: 14px;
 }
+
+/*----------------------------------------------------*/
+                 /*navigation1 css*/
+#nav1{
+  height: 40px; /*세로길이*/
+  width: 100%; /*가로길이*/
+  background-color: #daad86; /*#98DAFC #daad86 #312c32*/
+  float:left;
+  text-decoration: none;
+}
+
+.nav1a{
+  height: 40px; /*세로길이*/
+  width: 100px; /*가로길이*/
+  float:left;   /*왼쪽정렬*/   
+  color: #daad86;
+  background-color: #312c32; /*#98DAFC #daad86 #312c32*/
+  text-align: center;
+  line-height: 35px; /*텍스트높이*/
+}
+
+.nav1a:link {  /*아직 클릭하기 전 링크*/
+  color: #daad86; 
+  background-color: #daad86; 
+}
+ 
+.nav1a:hover {  /*마우스를 올렸을때 링크*/
+    color: white;
+    background-color: #5D5D5D;    
+}
+/*----------------------------------------------------*/
+                /*navigation2 css*/
+#nav2{
+  height: 1000px; /*세로길이*/
+  width: 15%; /*가로길이*/
+  float:left;
+}
+
+.nav2p{
+  height: 20px; /*세로길이*/
+  width: 100%; /*가로길이*/
+  color: black;
+  text-align: center;
+}
+
+.nav2a{
+  height: 20px; /*세로길이*/
+  width: 100%; /*가로길이*/
+  color: black;
+}
+
+.nav2p:link  {  /*아직 클릭하기 전 링크*/
+  color: #daad86; 
+}
+ 
+.nav2p:hover {  /*마우스를 올렸을때 링크*/
+    background-color: #daad86;
+}
+
+/*----------------------------------------------------*/
 .container {
     background-color:#f1f1f1;
     width:100%;
     overflow:auto;
-    top:100px;
+    position:absolute;
+    top:150px;
     bottom:0;
     height:auto;
     min-height:250px;
     min-width:550px;
     display: none;
+	  border:2px solid #D9E5FF;
 }
 
 #codeContainer {
@@ -151,7 +123,9 @@ ul { /**/
   margin-top: 5px;
   margin-right: 15px;
   background-color: #ffffff;
-  height: 200px;
+  height: 220px;
+  width: 450px;
+  border:2px solid #D9E5FF;
 }
 
 .currentCode {
@@ -190,6 +164,11 @@ ul { /**/
     to {left: 150px;}
 }
 
+@keyframes demomove2 {
+    from {left: 0px;}
+    to {left: 150px;}
+}
+
 #enlargeCSSProp {
     font-weight: bold;
     color: #000000;
@@ -199,3 +178,27 @@ ul { /**/
     font-weight: bold;
     color: #000000;
 }
+
+#htmlbox, #cssbox ,#jsbox ,#jqbox, #sqlbox, #phpbox, #aspbox{
+           max-width: 974px;
+           min-width: 0;
+           left: 0;
+           right: 0;
+           margin: auto;
+           top: 580px;
+           min-height:150px;
+           min-width:550px;
+           position:absolute;
+           height: auto;
+           bottom: auto;
+           border:2px solid #D9E5FF;
+          }
+          
+          .cssbut{
+             margin-top: 10px;
+             margin-left: 10px;
+          }
+          
+         
+     
+          

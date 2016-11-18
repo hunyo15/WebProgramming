@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html>
 
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    
     <script src="script.js"></script>
-     <style>
+    
+    <style>
             body {
             font-family: Arial;
             font-size: 16px;
@@ -25,192 +28,182 @@
   </head>
 
   <body>
-      <header>
-            <nav>
-                
-            </nav>
-        </header>
-    <div id="wrap">
-        <div id="header">
-	             Web Programming &nbsp;
-        </div>
-        <div id="middle">
-             <div id="sidebar"> 
-             <form>
-                <div>
-                    <div id="section" class="label" onclick="switchDisplay(0)">
-                    <p>HTML</p>
-                    </div>
-                    <div class="elements">
-                        <ul>
-                           <li><a href="#">sub1-1</a></li>
-                           <li><a href="#">sub1-2</a></li>
-                           <li><a href="#">sub1-3</a></li>
-                           <li><a href="#">sub1-4</a></li>
-                           <li><a href="#">sub1-5</a></li>
-                        </ul>
-                    </div>
-                </div>
-     
-                <div>
-                    <div id="section" class="label" onclick="switchDisplay(1)">
-                    <p>CSS</p>
-                    </div>
-                    <div class="elements">
-                      <ul>
-                         <li><a href="#">sub2-1</a></li>
-                         <li><a href="#">sub2-2</a></li>
-                      </ul>
-                    </div>
-                </div>
-     
-               <div>
-                   <div id="section" class="label" onclick="switchDisplay(2)">
-                   <p>JavaScript</p>
-                   </div>
-                   <div class="elements">
-                     <ul>
-                        <li><a href="#">sub3-1</a></li>
-                        <li><a href="#">sub3-2</a></li>
-                        <li><a href="#">sub3-3</a></li>
-                     </ul>
-                   </div>
-              </div>
-              </form>
-           </div>
-                  
-             <div id="content"> 
-             <!-- root container: container that includes sub-containers -->
-        <div id="rootContainer" class="container" style="display:block">
-
-            <!-- codeContainer: container that shows property options -->
-            <div id="codeContainer"> 
-                <!-- Title of container title -->
-                <div class="containerTitle">CSS Property:</div>
-                <!-- form that shows properties options -->
-                <form class="code" action="javascript: return false;">
-
-                    <!-- property Titile: It can be changed according to the proerty -->
-                    <div id="propertyTitle">animation-duration:</div>
-                    <br>
-                    <!-- hidden input tag to store input input data -->
-                    <input type="hidden" id="preselectedValue" value = "1s">
-
-                    <!-- menu items to be selected by radio button-->
-                    <div class="radio">
-                        <input autocomplete="off" type="radio" name="radio_position" 
-                               onclick="getPropertyValue(this)" id = "value_1" value="1s">
-                        <label for="value_1">1s</label>
-                    </div>
-                    <div class="radio">
-                        <input autocomplete="off" type="radio" name="radio_position" 
-                               onclick="getPropertyValue(this)" id = "value_2" value="2s">
-                        <label for="value_2">2s</label>
-                    </div>  
-                    <div class="radio">
-                        <input autocomplete="off" type="radio" name="radio_position" 
-                               onclick="getPropertyValue(this)" id = "value_3" value="5s">
-                        <label for="value_3">5s</label>
-                    </div>  
-                    <div class="radio">
-                        <input autocomplete="off" type="radio" name="radio_position" 
-                               onclick="getPropertyValue(this)" id = "value_4" value="10s">
-                        <label for="value_4">10s</label>
-                    </div>  
-                     <div class="radio">
-                        <input autocomplete="off" type="radio" name="radio_position" 
-                               onclick="getPropertyValue(this)" id = "value_4" value="500ms">
-                        <label for="value_4">500ms</label>
-                    </div>  
-                </form> <!-- end of form --> 
-            
-                <!-- sub container for JavaScript code -->
-                <div class="containerTitle">JavaScript Code:</div>
-                <!-- adopted JavaScript code  -->
-                <!-- propertyName: This bounds to the propertyTitle --> 
-                <!-- enlargecssprop: This bounds to the selected property value --> 
-                <div class="currentCode" id="JSCode">var domObj = document.getElementById("demoDIV");
-                domObj.style.<span id="propertyName">animationDuration</span> = <span id="enlargeJSValue">1s</span>;<br>
-                </div>  <!-- end adopted JavaScript code -->
-
-
-
-                <footer class="pfooter">
-                    <p>
-                        <strong>Note:</strong>
-                        <span id="note">note contents</span>
-                    </p>
-                </footer>
-            </div>    <!-- end of codeContainer -->
-          
-            <!-- resultContainer: container that represents results -->
-            <div class="resultContainer"> 
-
-                <!-- sub container for result -->
-                <div class="containerTitle">Result:</div> 
-                <!-- resultView where results are going to be shown -->
-                <div id="resultView">
-                    <!-- resultDiv:  parent object of the real object -->
-                    <div id="resultDIV">
-                        <div>
-                            <!-- demoDiv: the real object to be animated -->
-                            <div id="demoDIV">demo DIV</div>      
-                        </div>
-                    </div>
-                </div>
-           
-                <!-- sub container for CSS code -->
-                <div class="containerTitle">CSS Code:</div>
-                <!-- adopted css code  -->
-                <!-- propertyName: This bounds to the propertyTitle --> 
-                <!-- enlargecssprop: This bounds to the selected property value --> 
-                <pre class="currentCode" id="CSSCode">#demoDIV{<br> <span id="propertyName">animation-timing-function:<span id="enlargeCSSProp">1s</span>;<br>}
-                </pre>  <!-- end adopted css code -->
-          
-
-
-
-            </div>    <!-- end of resultContainer -->
-
-        </div>      <!-- end of rootContainer -->
-        </div>
-        </div>
-    </div>
-     <!-- footter of this page -->
-    <footer></footer>
+    <header>
+      <h1 id="pageTitle">Web Programming </h1>
+      
+      <nav id="nav1">
+        <a id="HTMLa" class="nav1a" onclick="switchDisplay(0)">HTML</a>
+        <a id="CSSa" class="nav1a" onclick="switchDisplay(1)">CSS</a>
+        <a id="JAVASCRIPTa" class="nav1a" onclick="switchDisplay(2)">JAVASCRIPT</a>
+        <a id="JQUERYa" class="nav1a" onclick="switchDisplay(3)">JQUERY</a>
+        <a id="SQLa" class="nav1a" onclick="switchDisplay(4)">SQL</a>
+        <a id="PHPa" class="nav1a" onclick="switchDisplay(5)">PHP</a>
+        <a id="ASPa" class="nav1a" onclick="switchDisplay(6)">ASP</a>
+      </nav>
+      
+    </header>
     
-  
-/*=========================================script부분===============================*/
-<script type="text/javascript">  
-setup()
-
-/* 모든 영역 접기*/
-var x = document.getElementsByClassName("elements");
-    for(i=0; i<3; i++){
-    x[i].style.display="none";
+    <!-- root container: container that includes sub-containers -->
+    <div id="rootContainer" class="container" style="display:block">
+      <!-- codeContainer: container that shows property options -->
+      <div id="codeContainer">
+        <!-- Title of container title -->
+        <div class="containerTitle">CSS Property:</div>
+        <!-- form that shows properties options -->
+        <form class="code" action="javascript: return false;">
+          <!-- property Titile: It can be changed according to the proerty -->
+          <div id="propertyTitle">animation-duration:</div>
+          <br />
+          <!-- hidden input tag to store input input data -->
+          <input type="hidden" id="preselectedValue" value="1s" />
+          <!-- menu items to be selected by radio button-->
+          <div class="radio">
+            <input autocomplete="off" type="radio" name="radio_position" onclick="getPropertyValue(this)" id="value_1" value="1s" />
+            <label id="label1" for="value_1">1s</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" type="radio" name="radio_position" onclick="getPropertyValue(this)" id="value_2" value="2s" />
+            <label id="label2" for="value_2">2s</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" type="radio" name="radio_position" onclick="getPropertyValue(this)" id="value_3" value="5s" />
+            <label id="label3" for="value_3">5s</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" type="radio" name="radio_position" onclick="getPropertyValue(this)" id="value_4" value="10s" />
+            <label id="label4" for="value_4">10s</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" type="radio" name="radio_position" onclick="getPropertyValue(this)" id="value_5" value="500ms" />
+            <label id="label5" for="value_5">500ms</label>
+          </div>
+        </form>
+        <!-- end of form -->
+        <!-- sub container for JavaScript code -->
+        <div class="containerTitle">JavaScript Code:</div>
+        <!-- adopted JavaScript code  -->
+        <!-- propertyName: This bounds to the propertyTitle -->
+        <!-- enlargecssprop: This bounds to the selected property value -->
+        <div class="currentCode" id="JSCode">var domObj = document.getElementById("demoDIV");
+        domObj.style.<span id="propertyName">animationDuration</span> =                     
+        <span id="enlargeJSValue">1s</span>;<br />
+        </div>  <!-- end adopted JavaScript code -->
+        
+        <footer class="pfooter">
+          <p>
+            <strong>Note:</strong>
+            <span id="note">note contents</span>
+          </p>
+        </footer>
+      </div>
+      <!-- end of codeContainer -->
+      <!-- resultContainer: container that represents results -->
+      <div class="resultContainer">
+        <!-- sub container for result -->
+        <div class="containerTitle">Result:</div>
+        <!-- resultView where results are going to be shown -->
+        <div id="resultView">
+          <!-- resultDiv:  parent object of the real object -->
+          <div id="resultDIV">
+            <div>
+              <!-- demoDiv: the real object to be animated -->
+              <div id="demoDIV">demo DIV</div>
+            </div>
+          </div>
+        </div>
+        <!-- sub container for CSS code -->
+        <div class="containerTitle">CSS Code:</div>
+        <!-- adopted css code  -->
+        <!-- propertyName: This bounds to the propertyTitle -->
+        <!-- enlargecssprop: This bounds to the selected property value -->
+        <pre class="currentCode" id="CSSCode">#demoDIV{<br/>
+          <span id="propertyName">animation-duration:
+          <span id="enlargeCSSProp">1s</span>;<br/>}
+          </span>
+        </pre>
+        <!-- end adopted css code -->
+      </div>
+      <!-- end of resultContainer -->
+    </div>
+    <!-- end of rootContainer -->
+    
+    <!-- start button box -->
+    <div id="htmlbox" class="btnbox" >
+      <button class="cssbut" onclick="">1</button>
+      <button class="cssbut" onclick="">2</button>
+      <button class="cssbut" onclick="">3</button>
+    </div>
+    
+    <div id="cssbox" class="btnbox" >
+      <button class="cssbut" onclick="cssbut1()">animation-duration</button>
+      <button class="cssbut" onclick="cssbut2()">animation-iteration-count</button>
+      <button class="cssbut" onclick="cssbut3()">animation-timing-function</button>
+    </div>
+    
+    <div id="jsbox" class="btnbox" >
+      <button class="cssbut" onclick="">4</button>
+      <button class="cssbut" onclick="">5</button>
+      <button class="cssbut" onclick="">6</button>
+    </div>
+    
+    <div id="jqbox" class="btnbox" >
+      <button class="cssbut" onclick="">7</button>
+      <button class="cssbut" onclick="">8</button>
+      <button class="cssbut" onclick="">9</button>
+    </div>
+    
+    <div id="sqlbox" class="btnbox" >
+      <button class="cssbut" onclick="">10</button>
+      <button class="cssbut" onclick="">11</button>
+      <button class="cssbut" onclick="">12</button>
+    </div>
+    
+    <div id="phpbox" class="btnbox" >
+      <button class="cssbut" onclick="">13</button>
+      <button class="cssbut" onclick="">14</button>
+      <button class="cssbut" onclick="">15</button>
+    </div>
+    
+     <div id="aspbox" class="btnbox">
+      <button class="cssbut" onclick="">16</button>
+      <button class="cssbut" onclick="">17</button>
+      <button class="cssbut" onclick="">18</button>
+    </div>
+    
+    <!-- footter of this page -->
+    <footer></footer>
+    <script type="text/javascript">  
+    setup()
+    
+    /* 모든 영역 접기*/
+    var x = document.getElementsByClassName("btnbox");
+    for(i=0; i<7; i++){
+     if(i!=1){
+     x[i].style.display="none";
+     }
     }
 
-/* 상태에 따라 접거나 펼치기*/
-function switchDisplay(k) {
-  var x = document.getElementsByClassName("elements");
+    /* 상태에 따라 접거나 펼치기*/
+    function switchDisplay(k) {
+    var x = document.getElementsByClassName("btnbox");
   
-  if(x[k].style.display=="none"){
-    x[k].style.display="block";
-    for(i=0; i<3; i++){
-      if(i==k){
-        continue ;
-      }
-      else{
-        x[i].style.display="none";
+    if(x[k].style.display=="none"){
+      x[k].style.display="block";
+      for(i=0; i<7; i++){
+        if(i==k){
+          continue ;
+        }
+        else{
+          x[i].style.display="none";
+        }
       }
     }
-  }
-  else{
-    x[k].style.display="none";
-  }
-}
-
-</script>
+    else{
+      x[k].style.display="none";
+      }
+    }
+     </script>
   </body>
-
 </html>
+
+
